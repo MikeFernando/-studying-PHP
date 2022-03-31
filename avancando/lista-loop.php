@@ -1,9 +1,9 @@
 <?php
 
-$lista = [21, 30, 60, 38, 17, 91, 8, 12];
+$idades = [21, 30, 60, 38, 17, 91, 8, 12];
 
-for ($i=0; $i < count($lista); $i++) { 
+for ($i=0; $i < count($idades); $i++) { 
     
-    echo $lista[$i]. PHP_EOL;
+    echo $idades[$i]. PHP_EOL;
 
 }
