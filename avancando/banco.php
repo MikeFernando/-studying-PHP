@@ -1,37 +1,34 @@
 <?php
 
+require "funcoes.php";
+
 $contasCorrentes = [
-    '123.456.789-10'    => [
+    '111.456.789-11'    => [
     'titular'           => 'Mike Fernando',
     'saldo'             => 2500
     ],
 
-    '321.345.679-11'    => [
+    '222.345.679-22'    => [
     'titular'           => 'Renê Hamilton',
     'saldo'             => 300
     ],
     
-    '838.002.010-10'    => [
+    '333.456.789-33'    => [
     'titular'           => 'Avelina Garcez',
     'saldo'             =>  3800
     ]
 ];
 
-$contasCorrentes['123.456.789-10']['saldo'] -= 500;
 
-
-if ( 500 > $contasCorrentes['321.345.679-11']['saldo'] ) {
-
-    echo "Você não pode sacar, saldo insuficiente!" . PHP_EOL;
-
-} else {
-
-    $contasCorrentes['321.345.679-11']['saldo'] -= 500;
-}
-
+$contasCorrentes['111.456.789-11'] = withdraw($contasCorrentes['111.456.789-11'], 500);
+$contasCorrentes['222.345.679-22'] = deposit($contasCorrentes['222.345.679-22'], 700);
 
 
 foreach ( $contasCorrentes as $cpf => $conta ) {
 
-    echo $cpf . " " . $conta['titular'] . " " . $conta['saldo'] .PHP_EOL;
-}   
+    displayMessage(
+        "$cpf
+        {$conta['titular']}
+        {$conta['saldo']}"
+    );
+}  
