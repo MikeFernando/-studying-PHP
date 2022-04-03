@@ -38,7 +38,7 @@ function deposit(array $conta, float $valueDeposit): array
     return $conta;
 }
 
-function capitalnName(array &$conta)
+function capitalName(array &$conta)
 {
     $conta['titular'] = mb_strtoupper($conta['titular']);
 }

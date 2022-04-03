@@ -19,7 +19,7 @@ $contasCorrentes = [
     ]
 ];
 
-capitalnName($contasCorrentes['333.456.789-33']);
+capitalName($contasCorrentes['333.456.789-33']);
 
 
 $contasCorrentes['111.456.789-11'] = withdraw($contasCorrentes['111.456.789-11'], 500);
@@ -28,9 +28,7 @@ $contasCorrentes['222.345.679-22'] = deposit($contasCorrentes['222.345.679-22'],
 
 foreach ( $contasCorrentes as $cpf => $conta ) {
 
-    displayMessage(
-        "$cpf
-        {$conta['titular']}
-        {$conta['saldo']}"
-    );
-}  
+    ['titular' => $titular, 'saldo' => $saldo ] = $conta;
+
+    displayMessage("$cpf $titular $saldo");
+}
