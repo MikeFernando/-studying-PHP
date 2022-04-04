@@ -21,9 +21,9 @@ $contasCorrentes = [
 
 capitalName($contasCorrentes['333.456.789-33']);
 
+unset($contasCorrentes['222.345.679-22']);
 
 $contasCorrentes['111.456.789-11'] = withdraw($contasCorrentes['111.456.789-11'], 500);
-$contasCorrentes['222.345.679-22'] = deposit($contasCorrentes['222.345.679-22'], 700);
 
 
 foreach ( $contasCorrentes as $cpf => $conta ) {
